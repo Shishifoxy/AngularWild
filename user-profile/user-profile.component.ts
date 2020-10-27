@@ -14,7 +14,13 @@ export class UserProfileComponent implements OnInit {
     quote  : '',
     photo  : 'https://randomuser.me/api/portraits/lego/2.jpg',
  };
-
+ isShown : boolean = false;
+public hide() {
+this.isShown = false;
+};
+public show() {
+  this.isShown = true;
+}
   constructor() { }
 
   ngOnInit(): void {

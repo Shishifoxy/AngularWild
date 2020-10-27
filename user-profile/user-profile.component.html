@@ -1,9 +1,9 @@
 <img [src]="User.photo" [alt]="User.name" />
 <div>
-Nom : {{User.name}}
-Prénom : {{User.firstName}}
-Age : {{User.age}}
+<p>Nom : {{User.name}}</p>
+<p>Prénom : {{User.firstName}}</p>
+<button *ngIf="!isShown" (click)="show()" >Afficher mon âge</button>
+<p *ngIf="isShown"><button (click)="hide()">Masquer mon âge</button> : {{User.age}}</p> 
+<p>Quote : {{User.quote}}</p>
 </div>
-<p>
-    Hello {{User.name}}
-</p>
+<input [(ngModel)]="User.quote">
