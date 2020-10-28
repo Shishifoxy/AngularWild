@@ -10,5 +10,5 @@ export class AppComponent {
   title = 'Raclette Party';
   isThisIngredientVital :boolean = true;
   displayGuestList :boolean = true;
-  displayColor :boolean = true;
+  useColor :boolean = true;
 }

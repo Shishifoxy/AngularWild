@@ -5,7 +5,7 @@ import { Directive, ElementRef, Renderer2, HostBinding, HostListener } from '@an
 })
 export class ColorOnlyOneLiDirective {
 
-  @HostBinding('class.firstElementStyle') setClass:string; // LIGNE A RAJOUTER POUR LA METHODE 2
+  @HostBinding('class.firstElementStyle') setClass:boolean; // LIGNE A RAJOUTER POUR LA METHODE 2
 
   constructor(private elRef:ElementRef, private renderer:Renderer2) {}
   ngOnInit() {
@@ -13,11 +13,11 @@ export class ColorOnlyOneLiDirective {
   }
     @HostListener ('mouseenter') mouseEnterEvent (eventData:Event) {
       //this.renderer.setStyle(this.elRef.nativeElement, 'background', 'yellow'); METHODE 1 HOVER
-      this.setClass = 'first-element-style'; // METHODE 2 AVEC LIMPORT DE HOSTBINDING
+      this.setClass = true; // METHODE 2 AVEC LIMPORT DE HOSTBINDING
     }
     @HostListener ('mouseleave') mouseLeaveEvent (eventData:Event) {
       //this.renderer.setStyle(this.elRef.nativeElement, 'background', 'transparent'); METHODE 1 HOVER
-      this.setClass = 'none'; // METHODE 2 AVEC LIMPORT DE HOSTBINDING
+      this.setClass = false; // METHODE 2 AVEC LIMPORT DE HOSTBINDING
 
 }
 }
