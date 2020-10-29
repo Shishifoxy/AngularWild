@@ -10,17 +10,19 @@
   <li>Chou-fleur</li>
 </ul>
   <hr>
-  <ul *appDisplayGuest="displayGuestList">
+  <div *appDisplayList="displayList">
+  <ul >
     <li>Brenda</li>
     <li>Dylan</li>
     <li>Jean-Mi</li>
     <li>Kylie</li>
   </ul>
+</div>
   <ul *ngFor="let song of songList">
     <li>{{song}}</li>
   </ul>
 
-  <ul >
+  <ul *appDisplayList="displayList">
     <li appColorOnlyOneLi>Shutter Island</li>
     <li>L'effet Papillon</li>
     <li>Constantine</li>

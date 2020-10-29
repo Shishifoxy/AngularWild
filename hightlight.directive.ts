@@ -20,3 +20,5 @@ export class HightlightDirective implements OnInit {
       this.myBackgroundColor = 'transparent'; // METHODE 2 AVEC LIMPORT DE HOSTBINDING
     }
   }
+
+  
